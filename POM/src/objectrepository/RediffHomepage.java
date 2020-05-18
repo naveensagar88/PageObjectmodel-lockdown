@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RediffHomepage {
 
-
 	WebDriver driver;
 	public RediffHomepage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

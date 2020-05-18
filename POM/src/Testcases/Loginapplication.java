@@ -3,6 +3,8 @@ package Testcases;
 import objectrepository.RediffHomepage;
 import objectrepository.RediffLoginpage;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +15,7 @@ public class Loginapplication {
 	
 	// Home page class implemented in Page object factory methdos
 	@Test
-	public void Login()
+	public void Login() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
@@ -24,10 +26,17 @@ public class Loginapplication {
 		//rd.submit().click();
 		System.out.println("submit");
 		rd.Home().click();
+		
 		RediffHomepage rh=new RediffHomepage(driver);
+		
+		Thread.sleep(3000);
 		rh.Search().sendKeys("rediff");
 		rh.Search().sendKeys(Keys.ENTER);
 		//rh.Submit().click();
+		
+		
+		
+		
 		
 		
 		

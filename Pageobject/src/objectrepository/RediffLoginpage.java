@@ -12,34 +12,30 @@ public class RediffLoginpage {
 		this.driver=driver;
 	}
 	
-   By username=By.xpath(".//*[@id='login1']");
-   By Password=By.name("passwd");
-   By go=By.name("proceed");
-   By home=By.linkText("Home");
-   
-   
-   public WebElement Emaild()
-   {
-	   return driver.findElement(username);
-   }
-         
-   public WebElement Password()
-   {
-	   return driver.findElement(Password);
-   }
-   
-   public WebElement submit()
-   {
-	   return driver.findElement(go);
-   }
-   
-   public WebElement Home()
-   {
-	   return driver.findElement(home);
-   }
-	
-
-	
-	
-	
+	By username=By.xpath(".//*[@id='login1']");
+	   By Password=By.name("passwd");
+	   By go=By.name("proceed");
+	   By home=By.xpath("//a[@class='f12']");
+	   
+	   
+	   public WebElement Emaild()
+	   {
+		   return driver.findElement(username);
+	   }
+	         
+	   public WebElement Password()
+	   {
+		   return driver.findElement(Password);
+	   }
+	   
+	   public WebElement submit()
+	   {
+		   return driver.findElement(go);
+	   }
+	   
+	   public WebElement Home()
+	   {
+		   return driver.findElement(home);
+	   }
+		
 }
